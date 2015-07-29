@@ -18,7 +18,6 @@ EVENT_AUDIENCE_CHOICES = (
 
 class HomePage(Page):
     body = StreamField([
-        ('heading', blocks.CharBlock(classname="full title")),
         ('paragraph', blocks.RawHTMLBlock())
     ])
     category = models.CharField(max_length=12, choices=EVENT_AUDIENCE_CHOICES, default='signature')
