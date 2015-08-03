@@ -1,0 +1,7 @@
+{% load custom_tags wagtailcore_tags %}
+
+{% for page in pages %}
+    <li>
+        <a href="{% pageurl page %}"><b class="caret">{{ page.title }}</b></a>
+    </li>       
+{% endfor %}
