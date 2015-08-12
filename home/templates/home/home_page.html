@@ -1,9 +1,42 @@
+<link rel="stylesheet" type="text/css" href="static/main.css">
+
 {% extends "base.html" %}
 
-{% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}
+<!--{% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}-->
 
 {% block content %}
-    <h1>{{ self.title }}</h1>
+    <header class="header-main header--discover">
+      <a title="Explore The Portal" class="button-explore header-button-explore">
+        <i class="icon-explore"><em></em></i>
+        <span>Explore the Portal</span>
+      </a>
+      <a title="Back to Home" class="header-logo-laureate ">
+        <i class="icon-leaf"></i>
+      </a>
+      <a title="Go to Profile" class="header-login-container">
+        <img  src="http://global2.laureate.net/assets/img/global/profilepic.jpg">
+        <span class="header-login-name">Wilson Sánchez</span>
+        <span class="header-login-email">wilson.sanchez@laureate.net</span>
+      </a>
+      <a title="Need Help?" class="header-button-help">
+        <i class="icon-help-bold"></i>
+        <span>Support</span>
+      </a>
+    </header>
+    <section class="intro intro--discover container--has-bgimage" id="home" data-sr="wait 0.1s then enter over 1s">
+      <div class="container">
+        <div class="columns-12 intro-welcome">
+          <i class="icon-discover" data-sr="wait 2s then scale down 20% over 1s"></i>   
+          <h2 data-sr="wait 1s then enter bottom move 5px over 1s">Welcome to Laureate Discover</h2>
+          <span data-sr="wait 1.5s then enter bottom move 5px over 1s">A World of Knowledge at Your Fingertips</span>
+          <p data-sr="wait 2.5s then enter top move 5px">Laureate Discover is a repository of academic tools and digital resources aimed to help Laureate institutions find, consume and collaborate content in the digital world.</p>
+          <a href="#benefits" class="intro-calltoaction" title="Our Benefits">
+            <span class="intro-cta-title" data-sr="wait 3s then enter bottom and move 20px ">Start Discovering</span>
+            <i class="icon-arrow-down-ligth" data-sr="wait 3s then enter bottom and move 20px "></i>       
+          </a>
+        </div>
+      </div>
+    </section>
 
     {{ self.section_1 | safe }}
 
@@ -16,4 +49,89 @@
     {{ self.section_5 | safe }}
 
     {{ self.section_6 | safe }}
+
+    <section class="contactbox contactbox--discover" id="contact" >
+      <header class="header--centered header--has-icons" data-sr='wait 0.5s then scale up 20%'>
+        <i class="icon-email"></i>     
+        <h2>Contact Us</h2>
+        <span>We’re always happy to hear from you and there are various ways you can contact us. Thanks for your participation and feedback! </span>
+      </header>
+      
+      <div class="container">
+        <div class="columns-8" data-sr="wait 0.2s then enter left 500px">
+          <h3>Send us a Message</h3>
+          <form>
+              <div>
+                <label>Your Name</label>
+                <input type="text">
+              </div>
+              <div >
+                <label>Your Email</label>
+                <input  type="email">
+              </div>
+              <div>
+                <label>Your Message</label>
+                <textarea></textarea>
+              </div>
+              <div >
+                <button>Send Message</button>
+              </div>
+          </form>
+        </div>
+        <div class="columns-4" data-sr="wait 0.6s then enter right 300px">
+          <h3>Contact Information</h3>
+          <div class="contact-information">
+            <span class="contact-name">Nina Meyers</span>
+            <span class="contact-position">Laureate Discover Manager</span>
+            <span class="contact-company"> Laureate Network Products & Services</span>
+            <a href="mailto:nina.myers@laureate.net">
+              <i class="icon-email"></i> 
+              <span class="contact-email"> nina.myers@laureate.net</span>
+            </a>
+          </div>
+          <div class="contact-information">
+            <span class="contact-name">Pamela Barrientos</span>
+            <span class="contact-position">Laureate Discover Senior Administrator</span>
+            <span class="contact-company"> Laureate Network Products & Services</span>
+            <a href="mailto:pamela.barrientos@laureate.net">
+              <i class="icon-email"></i> 
+              <span class="contact-email"> pamela.barrientos@laureate.net</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer >
+        <div class="container">
+
+          <div class="columns-6">
+            <h3>Laureate Discover Portal</h3>
+            <a href="http://www.laureate.net">2014 Laureate Education Inc.</a>
+          </div>
+          <div class="columns-6">
+            <h3>Connect With Us</h3>
+            <ul class="nav nav--has-icons">
+              <li><a href="https://www.facebook.com/LaureateConnect" target="_blank">
+                <i class="icon-facebook"></i>
+              </a></li>
+              <li><a href="https://twitter.com/LaureateConnect" target="_blank">
+                <i class="icon-twitter"></i>
+              </a></li>
+              <li><a href="http://www.youtube.com/Laureate" target="_blank">
+                <i class="icon-youtube"></i>
+              </a></li>
+              <li><a href="https://plus.google.com/u/107155794915479080726/107155794915479080726/posts" target="_blank">
+                <i class="icon-google"></i>
+              </a></li>
+              <li><a href="http://www.pinterest.com/LaureateConnect/" target="_blank">
+                <i class="icon-pinterest"></i>
+              </a></li>
+              <li><a href="http://www.linkedin.com/company/laureate-international-universities" target="_blank">
+                <i class="icon-linkedin"></i>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+    </footer>
 {% endblock %}
