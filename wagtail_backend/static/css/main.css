@@ -10045,7 +10045,7 @@ form div.input-is-disable button:hover {
   left: 30px;
   position: absolute;
   content: "";
-  background-image: url(../img/signature/bg-testimonials-1.svg);
+  background-image: url(http://global2.laureate.net/assets/img/signature/bg-testimonials-1.svg);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=15);
   opacity: 0.15;
 }
@@ -10056,7 +10056,7 @@ form div.input-is-disable button:hover {
   bottom: 40px;
   right: 22px;
   left: auto;
-  background-image: url(../img/signature/bg-testimonials-2.svg);
+  background-image: url(http://global2.laureate.net/assets/img/signature/bg-testimonials-2.svg);
 }
 @media only screen and (max-width: 40em) {
   /* line 177, ../sass/modules/_blocks.scss */
@@ -11155,7 +11155,7 @@ span.label-type {
 @media only screen and (min-width: 64em) {
   /* line 5, ../sass/modules/_resources.scss */
   .resources-signature {
-    background-image: url("../img/signature/bg-promotional-signature-videos.jpg");
+    background-image: url("http://global2.laureate.net/assets/img/signature/bg-promotional-signature-videos.jpg");
   }
 }
 
@@ -11282,7 +11282,7 @@ span.label-type {
 .resource-preview-details a {
   width: 100%;
   height: 200px;
-  background-image: url("../img/signature/pic-resourcesintro.svg");
+  background-image: url("http://global2.laureate.net/assets/img/signature/pic-resourcesintro.svg");
   background-repeat: no-repeat;
   background-position: center center;
   -moz-background-size: contain;
@@ -12693,23 +12693,23 @@ p.label-soon {
 **********************/
 /* line 684, ../sass/modules/_catalogs.scss */
 .catalog--minors.catalog-preview {
-  background-image: url("../img/signature/bg-catalog-preview-minors-small.jpg");
+  background-image: url("http://global2.laureate.net/assets/img/signature/bg-catalog-preview-minors-small.jpg");
 }
 @media only screen and (min-width: 79em) {
   /* line 684, ../sass/modules/_catalogs.scss */
   .catalog--minors.catalog-preview {
-    background-image: url("../img/signature/bg-catalog-preview-minors.jpg");
+    background-image: url("http://global2.laureate.net/assets/img/signature/bg-catalog-preview-minors.jpg");
   }
 }
 
 /* line 691, ../sass/modules/_catalogs.scss */
 .catalog--lmba.catalog-preview {
-  background-image: url("../img/signature/bg-catalog-preview-lmba-small.jpg");
+  background-image: url("http://global2.laureate.net/assets/img/signature/bg-catalog-preview-lmba-small.jpg");
 }
 @media only screen and (min-width: 79em) {
   /* line 691, ../sass/modules/_catalogs.scss */
   .catalog--lmba.catalog-preview {
-    background-image: url("../img/signature/bg-catalog-preview-lmba.jpg");
+    background-image: url("http://global2.laureate.net/assets/img/signature/bg-catalog-preview-lmba.jpg");
   }
 }
 
@@ -12859,7 +12859,7 @@ p.label-soon {
   color: #666666;
   min-height: 100px;
   background-repeat: no-repeat;
-  background-image: url(../img/signature/bg-testimonials-1.svg);
+  background-image: url(http://global2.laureate.net/assets/img/signature/bg-testimonials-1.svg);
   background-position: top left;
 }
 
