@@ -18,6 +18,12 @@ UNIVERSITY_CHOICES = (
     ('UVM', "Universidad del Valle de Mexico"),
 )
 
+LANGUAGE_CHOICES = (
+    ('en', "English"),
+    ('es', "Spanish"),
+    ('pt', "Portuguese")
+)
+
 
 class HomePage(Page):
     section_1 = models.TextField(null=False, blank=False)
@@ -27,13 +33,16 @@ class HomePage(Page):
     section_5 = models.TextField(null=False, blank=False)
     section_6 = models.TextField(null=False, blank=False)
 
+    language = models.CharField(choices=LANGUAGE_CHOICES, default='en', max_length=3, null=False, blank=False)
+
     content_panels = Page.content_panels + [
         FieldPanel('section_1'),
         FieldPanel('section_2'),
         FieldPanel('section_3'),
         FieldPanel('section_4'),
         FieldPanel('section_5'),
-        FieldPanel('section_6')
+        FieldPanel('section_6'),
+        FieldPanel('language')
     ]
 
 
