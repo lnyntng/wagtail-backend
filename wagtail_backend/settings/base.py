@@ -15,6 +15,7 @@ import os
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
+IS_PROD_ENV = os.environ.get('HEROKU_ENV', False)
 
 
 # Quick-start development settings - unsuitable for production
@@ -92,6 +93,28 @@ WSGI_APPLICATION = 'wagtail_backend.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd8o4ts9rgsv55v',
+        'USER': 'ggupiyudrbkhur',
+        'PASSWORD': 'EcoJwSBQmkwOtLff31radhtWIg',
+        'HOST': 'ec2-54-83-51-0.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+} if IS_PROD_ENV else {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'wagtail',
+        'USER': 'postgres',
+        'PASSWORD': '123qwe',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
+
+
+
+{
     'local': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'wagtail',
@@ -109,6 +132,8 @@ DATABASES = {
         'PORT': '5432',
     }
 }
+
+
 
 
 # Internationalization
