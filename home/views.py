@@ -14,7 +14,6 @@ def get(request, university, language):
     response_data = []
     for page in filtered_pages:
         response_data.append({
-            'title': page.title,
             'section_1': page.section_1,
             'section_2': page.section_2,
             'section_3': page.section_3,
