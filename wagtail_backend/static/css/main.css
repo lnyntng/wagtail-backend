@@ -5410,7 +5410,7 @@ header a.clear-link {
 
 /* line 578, ../sass/modules/_intros.scss */
 .intro-about--signature div:nth-child(1) {
-  background-image: url("../img/signature/bg-feature-signature-strategy.jpg");
+  background-image: url("http://global2.laureate.net/assets/img/signature/bg-feature-signature-strategy.jpg");
   color: #FFFFFF;
 }
 
@@ -12906,7 +12906,7 @@ p.label-soon {
 /* line 44, ../sass/modules/_testimonials.scss */
 .testimonial-details {
   background-repeat: no-repeat;
-  background-image: url("../img/signature/bg-testimonials-2.svg");
+  background-image: url("http://global2.laureate.net/assets/img/signature/bg-testimonials-2.svg");
   background-position: top right;
   width: 100%;
   text-align: center;
