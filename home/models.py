@@ -34,6 +34,8 @@ class HomePage(Page):
     section_6 = models.TextField(null=False, blank=False)
 
     language = models.CharField(choices=LANGUAGE_CHOICES, default='en', max_length=3, null=False, blank=False)
+    university = models.CharField(choices=UNIVERSITY_CHOICES, default='LIU', max_length=3, null=False, blank=False)
+
 
     content_panels = Page.content_panels + [
         FieldPanel('section_1'),
@@ -42,7 +44,8 @@ class HomePage(Page):
         FieldPanel('section_4'),
         FieldPanel('section_5'),
         FieldPanel('section_6'),
-        FieldPanel('language')
+        FieldPanel('language'),
+        FieldPanel('university')
     ]
 
 

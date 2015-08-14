@@ -15,7 +15,7 @@ urlpatterns = [
 
     url(r'^search/$', 'search.views.search', name='search'),
 
-    url(r'^get/$', 'home.views.get', name='get'),
+    url(r'^get/(?P<university>\w+)/(?P<language>\w{1,2})/$', 'home.views.get', name='get'),
 
     url(r'', include(wagtail_urls)),
 ]
