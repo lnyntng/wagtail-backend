@@ -34,7 +34,7 @@ class HomePage(Page):
     section_6 = models.TextField(null=False, blank=False)
 
     language = models.CharField(choices=LANGUAGE_CHOICES, default='en', max_length=3, null=False, blank=False)
-    university = models.CharField(choices=UNIVERSITY_CHOICES, default='LIU', max_length=3, null=False, blank=False)
+    university = models.CharField(choices=UNIVERSITY_CHOICES, default='LIU', max_length=10, null=False, blank=False)
 
 
     content_panels = Page.content_panels + [
