@@ -22,4 +22,4 @@ def get(request, university, language):
             'section_6': page.section_6
         })
 
-    return HttpResponse(json.dumps(response_data), content_type="application/json")
+    return HttpResponse(str(json.dumps(response_data)))
