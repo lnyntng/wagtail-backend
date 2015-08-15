@@ -1,0 +1,15 @@
+<link rel="stylesheet" type="text/css" href="/static/css/main.css">
+
+{% extends "base.html" %}
+
+<!--{% block body_class %}template-{{ self.get_verbose_name|slugify }}{% endblock %}-->
+
+{% block content %}
+    <h1> {{ self.title }} </h1>
+
+    {% for article in self.articles %}
+    	{{article}}
+    {% endfor %}
+
+    
+{% endblock %}
