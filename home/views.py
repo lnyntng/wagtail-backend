@@ -13,6 +13,7 @@ def get(request, university, language):
 
     response_data = []
     for page in filtered_pages:
+        callback = request.GET['callback']
         response_data.append({
             'section_1': page.section_1,
             'section_2': page.section_2,
@@ -22,4 +23,4 @@ def get(request, university, language):
             'section_6': page.section_6
         })
 
-    return HttpResponse(str(json.dumps(response_data)))
+    return HttpResponse(callback + '(' + str(json.dumps(response_data))+ ')')
