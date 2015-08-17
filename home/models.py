@@ -53,13 +53,16 @@ class Article(StructBlock):
     title = blocks.CharBlock(required=True)
     body = blocks.RichTextBlock(required=True)
     author = blocks.CharBlock(required=True)
+    picture = ImageChooserBlock(required=True)
 
 
 class ArticlePage(Page):
     articles = StreamField([
         ('article', Article(required=True))
     ])
+    university = models.CharField(choices=UNIVERSITY_CHOICES, default='LIU', max_length=10, null=False, blank=False)
 
     content_panels = Page.content_panels + [
-        StreamFieldPanel('articles')
+        StreamFieldPanel('articles'),
+        FieldPanel('university')
     ]
