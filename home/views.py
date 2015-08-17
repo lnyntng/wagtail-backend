@@ -22,7 +22,7 @@ def get(request, university, language):
             'section_4': page.section_4,
             'section_5': page.section_5,
             'section_6': page.section_6
-        })
+        }) 
 
     return HttpResponse(callback + '(' + str(json.dumps(response_data))+ ')')
 
